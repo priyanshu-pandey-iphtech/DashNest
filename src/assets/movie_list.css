@@ -1,0 +1,401 @@
+/* Fixed header with search box */
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 0px;
+    background: white;
+    z-index: 1000;
+
+
+}
+
+/* Back button */
+.back_btn {
+    display: flex;
+    align-items: center;
+    gap: 0px;
+    background-color: white;
+    color: #0b4fa4;
+    height: 35px;
+    border: none;
+    border-radius: 10px;
+    font-size: 18px;
+    cursor: pointer;
+    padding: 5px 10px;
+}
+
+.back-icon {
+    padding: 0;
+    margin: 0;
+    font-size: 18px;
+    vertical-align: middle;
+}
+
+
+.bckbtn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0px;
+    margin-left: 148px;
+    font-size: 18px;
+
+
+
+}
+
+
+/* Center the heading */
+.header h1 {
+    flex-grow: 1;
+    /* Makes it take available space */
+    text-align: center;
+    font-size: 24px;
+    margin: 0;
+}
+
+/* Search box inside the header */
+.search-box {
+    display: flex;
+    align-items: center;
+    width: 200px;
+    height: 30px;
+    border: 1px solid grey;
+    border-radius: 20px;
+    padding: 8px;
+    background: #f9fafb;
+    margin-right: 160px;
+}
+
+.search-input {
+    flex: 1;
+    border: none;
+    outline: none;
+    font-size: 16px;
+    padding-left: 10px;
+    background: #f9fafb;
+}
+
+.search-icon {
+    color: gray;
+    font-size: 18px;
+}
+
+/* Tabs should be fixed below the header */
+.tabs {
+    position: fixed;
+    top: 70px;
+    /* Adjust based on header height */
+    left: 0;
+    width: 100%;
+    background: white;
+    display: flex;
+    justify-content: center;
+    gap: 55px;
+    padding: 10px 0;
+    z-index: 999;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.05);
+}
+
+/* Buttons inside tabs */
+.tabs button {
+    background: none;
+    border: none;
+    color: #bbb;
+    font-size: 18px;
+    padding: 10px 15px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.tabs button.active {
+    color: #0b4fa4;
+    font-weight: bold;
+    border-bottom: 3px solid #0b4fa4;
+}
+
+.tabs button:hover {
+    color: #0b4fa4;
+}
+
+.movies-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    gap: 25px;
+    /* Adjust gap to control spacing between cards */
+    padding: 20px;
+    margin-top: 150px;
+    margin-left: 130px;
+}
+
+.movie-card {
+    width: 250px;
+    height: 350px;
+    /* Adjust width as needed */
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    text-align: center;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+    cursor: pointer;
+}
+
+.movie-card:hover {
+    transform: scale(1.05);
+}
+
+/* Movie Poster */
+.movie-poster {
+    width: 100%;
+    height: 200px;
+    /* Adjust height for consistency */
+    object-fit: contain;
+
+}
+
+/* Movie Info */
+.movie-info {
+    padding: 0px;
+    color: black;
+}
+
+
+.movie-info h3 {
+    font-size: 16px;
+    margin-bottom: 5px;
+    font-weight: bold;
+
+}
+
+.info-icon {
+    margin-left: 15px;
+
+    /* Adjust as needed */
+}
+
+.movie-info p {
+    font-size: 14px;
+    color: black;
+    /* Year color black */
+}
+
+.movie-rating {
+    margin: 5px 0;
+}
+
+.star {
+    font-size: 16px;
+    color: lightgray;
+}
+
+.star.filled {
+    color: gold;
+}
+
+/* Watch Button */
+.watch-button {
+    background-color: #ff4d4d;
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 5px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: 0.3s;
+    display: block;
+    width: 40%;
+    margin: 10px auto 0;
+    margin-left: 130px;
+}
+
+.watch-button:hover {
+    background-color: #e63946;
+}
+
+.year_star_container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 90px;
+}
+
+.movie-title {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 100%;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.tooltip-container {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.tooltip-text {
+    visibility: hidden;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    text-align: center;
+    padding: 5px 10px;
+    border-radius: 5px;
+    position: absolute;
+    left: 50%;
+    bottom: 125%;
+    transform: translateX(-50%);
+    white-space: nowrap;
+    z-index: 10;
+    font-size: 14px;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.tooltip-container:hover .tooltip-text {
+    visibility: visible;
+    opacity: 1;
+}
+
+@media (max-width: 1440px) {
+    .search-box {
+        height: 20px;
+        margin-right: 220px;
+    }
+}
+
+@media (max-width: 1024px) {
+    .movies-grid {
+        margin-left: 90px;
+    }
+
+    .search-box {
+        height: 20px;
+        margin-right: 120px;
+    }
+}
+
+@media (max-width: 768px) {
+    .search-box {
+        height: 20px;
+        width: 150px;
+        margin-right: 120px;
+    }
+
+    .bckbtn {
+        margin-left: 10px !important;
+        position: absolute;
+        left: 80px;
+        top: 1px;
+    }
+
+    .header h1 {
+        margin-left: 160px;
+    }
+
+    .tabs {
+        top: 50px;
+    }
+
+
+}
+
+@media (max-width: 425px) {
+    .header {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .bckbtn {
+        position: absolute;
+        left: 0px;
+
+    }
+
+    .back_btn {
+        font-size: 14px;
+        height: 20px;
+
+    }
+
+    .header h1 {
+        font-size: 20px;
+        margin-left: 0;
+    }
+
+    .search-box {
+        width: 180px;
+        height: 25px;
+        margin: 15px 0;
+        padding: 5px;
+    }
+
+    .search-input {
+        font-size: 14px;
+        padding-left: 5px;
+    }
+
+    .tabs {
+        top: 100px;
+        gap: 20px;
+        padding: 8px 0;
+    }
+
+    .tabs button {
+        font-size: 14px;
+        padding: 8px 10px;
+    }
+
+    .movies-grid {
+        justify-content: center;
+        margin: 130px auto 0;
+        padding: 10px;
+        gap: 15px;
+    }
+
+    .movie-card {
+        width: 80%;
+        height: 330px;
+    }
+
+    .movie-poster {
+        height: 200px;
+    }
+
+    .movie-info h3 {
+        font-size: 14px;
+    }
+
+    .watch-button {
+        width: 80%;
+        font-size: 12px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .year_star_container {
+        gap: 40px;
+    }
+}
+
+@media (max-width: 375px) {
+    .header h1 {
+        margin-left: 20px;
+        margin-top: 20px;
+    }
+
+    .tabs {
+        top: 120px;
+        gap: 20px;
+        padding: 8px 0;
+    }
+
+}

@@ -1,0 +1,248 @@
+.both_counter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    margin-top: 40px;
+
+}
+
+.integer_counter_container,
+.decimal_counter_container {
+    border: 1px solid black;
+    padding: 50px;
+    width: 300px;
+
+    text-align: center;
+    border-radius: 10px;
+}
+
+.integer_counter_container h2,
+.decimal_counter_container h2 {
+    margin: 0 auto;
+    text-align: left;
+    margin-bottom: 10px;
+}
+
+
+.counter-heading {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 60%;
+
+    padding: 0 20px;
+    margin-top: 100px;
+}
+
+.plus_btn {
+    background-color: #437E44;
+    border: none;
+    color: white;
+    border: none;
+    height: 40px;
+    width: 120px;
+    border-radius: 10px;
+    font-size: 30px;
+
+}
+
+.minus_btn {
+    background-color: #437E44;
+    border: none;
+    color: white;
+    border: none;
+    height: 40px;
+    width: 120px;
+    border-radius: 10px;
+    font-size: 30px;
+
+}
+
+.reset_btn {
+    background-color: #437E44;
+    border: none;
+    color: white;
+    border: none;
+    margin-top: 15px;
+    height: 40px;
+    width: 120px;
+    border-radius: 10px;
+    font-size: 20px;
+
+
+}
+
+.int_counter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.user_input {
+
+    background-color: #F7D2CE;
+    border: none;
+    border-radius: 10px;
+    height: 30px;
+    width: 120px;
+    text-align: center;
+}
+
+.reset_btn_alignment {
+    align-items: center;
+
+
+}
+
+.user_input::-webkit-outer-spin-button,
+.user_input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.back_btn {
+    background-color: white;
+    color: #0b4fa4;
+    margin-top: 15px;
+    height: 35px;
+    width: 85px;
+    border: none;
+    border-radius: 10px;
+    font-size: 20px;
+    align-self: self-start;
+    cursor: pointer;
+}
+
+.bckbtn {
+    display: flex;
+    align-items: center;
+    gap: 0px;
+    /* Space between icon and text */
+    margin-left: 120px;
+    font-size: 21px;
+}
+
+.back_btn svg {
+    font-size: 20px;
+    /* Adjusts icon size */
+}
+
+@media (max-width: 768px) {
+    .both_counter {
+        flex-direction: column;
+        /* Stacks counters vertically */
+        gap: 30px;
+        /* Adds spacing */
+        /* padding-top: 50px; */
+    }
+
+    .integer_counter_container,
+    .decimal_counter_container {
+        width: 80%;
+        /* Adjusts width for smaller screens */
+        padding: 30px;
+    }
+
+    .counter-heading {
+        font-size: 20px;
+        gap: 25px;
+        margin-left: 15%;
+    }
+
+    .plus_btn,
+    .minus_btn,
+    .reset_btn {
+        width: 100px;
+        font-size: 14px;
+    }
+
+    .user_input {
+        width: 100px;
+        font-size: 16px;
+    }
+
+    .back_btn {
+        position: absolute;
+        margin-left: 20%;
+        top: 10px;
+        left: 10px;
+        margin-top: 0;
+    }
+}
+
+@media (max-width: 480px) {
+    .both_counter {
+        gap: 40px;
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+
+    .integer_counter_container,
+    .decimal_counter_container {
+        width: 70%;
+        padding: 20px;
+    }
+
+    .counter-heading {
+        font-size: 18px;
+        margin: 40px;
+    }
+
+    .plus_btn,
+    .minus_btn,
+    .reset_btn {
+        width: 90px;
+        font-size: 14px;
+    }
+
+    .user_input {
+        width: 90px;
+        font-size: 14px;
+    }
+
+    .back_btn {
+        margin-left: 25px;
+        height: fit-content;
+        width: fit-content;
+        font-size: 15px;
+
+    }
+}
+
+@media (max-width: 320px) {
+    .both_counter {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 35px;
+        margin-left: auto;
+        margin-right: auto;
+        height: fit-content;
+        width: fit-content;
+    }
+
+    .integer_counter_container,
+    .decimal_counter_container {
+        width: 70%;
+        padding: 20px;
+        margin: 0px, auto;
+    }
+
+    .counter-heading {
+        font-size: 16px;
+        gap: 15px;
+    }
+
+    .back_btn {
+        margin-left: auto;
+        margin-right: auto;
+        display: block;
+        height: fit-content;
+        width: fit-content;
+        font-size: 15px;
+    }
+
+
+}
